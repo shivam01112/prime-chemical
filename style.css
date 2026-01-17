@@ -2173,7 +2173,7 @@ font-size: 67px;
     margin-top: 150px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 560px) {
   
     .client-section {
     background-color: #EDEDED;
