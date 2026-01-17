@@ -2261,7 +2261,7 @@ font-size: 67px;
     font-weight: 600;
     color: #51A5DC;
     text-align: center;
-    padding: 33px 0px 14px 0px;
+    padding: 53px 0px 14px 0px !important;
 }
     .lab-title {
         font-family: 'Raleway', sans-serif;
