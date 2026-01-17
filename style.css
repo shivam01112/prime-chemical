@@ -709,79 +709,51 @@ header {
 
 /* Responsive Small */
 @media (max-width: 768px) {
-    .header-container {
-        padding: 0 12px;
+    header {
+        padding: 10px 0;
     }
-    
+
     .header-content {
-        padding: 10px 16px;
-        flex-wrap: wrap;
-        border-radius: 35px;
+        
+        align-items: center;
+        gap: 15px;
     }
-    
-    .nav-left {
-        width: 100%;
-        order: 1;
-    }
-    
-    .nav-right {
-        width: 100%;
-        order: 2;
-        justify-content: flex-start;
-        margin-top: 8px;
-    }
-    
-    .nav-toggle {
-        display: flex;
-    }
-    
+
     .nav-menu {
         display: none;
-        position: absolute;
-        top: calc(100% + 15px);
-        right: 12px;
-        left: 12px;
-        background: #fff;
         flex-direction: column;
-        gap: 0;
-        padding: 5px 0;
-        border-radius: 15px;
-        width: auto;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        align-items: center;
+        background-color: #fff;
+        position: absolute;
+        top: 91%;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         z-index: 1000;
+        padding: 20px;
     }
-    
+
     .nav-menu.active {
         display: flex;
     }
-    
-    .nav-menu li {
-        width: 100%;
-    }
-    
+
     .nav-link {
-        display: block;
-        padding: 9px 14px;
-        border-radius: 0;
+        padding: 10px 20px;
         width: 100%;
-        text-align: left;
-        font-size: 12px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
     }
-    
-    .nav-link.active {
-        border-radius: 0;
+
+    .nav-toggle {
+        display: flex;
     }
-    
-    .logo-img {
-        height: 38px;
-    }
-    
-    .brand-text {
-        font-size: 13px;
-    }
-    
-    .since {
-        font-size: 9px;
+
+    .nav-toggle span {
+        width: 25px;
+        height: 3px;
+        background: #333;
+        margin: 4px 0;
+        transition: all 0.3s;
     }
 }
 
@@ -835,347 +807,6 @@ header {
     .nav-link {
         padding: 8px 12px;
         font-size: 11px;
-    }
-}
-
-/* Responsive Medium */
-@media (max-width: 992px) {
-    .header-border {
-        display: none;
-    }
-    
-    .navbar-custom {
-        padding: 0 12px;
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .nav-left {
-        order: 1;
-        width: 100%;
-        justify-content: flex-start;
-    }
-    
-    .nav-center {
-        order: 2;
-        width: 100%;
-        flex: 1;
-        margin: 5px 0;
-    }
-    
-    .nav-right {
-        order: 3;
-        width: 100%;
-        justify-content: flex-start;
-    }
-    
-    .nav-toggle {
-        display: flex;
-    }
-    
-    .nav-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 12px;
-        left: 12px;
-        background: #f9f9f9;
-        flex-direction: column;
-        gap: 0;
-        padding: 8px 0;
-        border-top: 1px solid #eee;
-        width: auto;
-        border-radius: 0 0 8px 8px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    
-    .nav-menu.active {
-        display: flex;
-    }
-    
-    .nav-menu li {
-        width: 100%;
-    }
-    
-    .nav-link {
-        display: block;
-        padding: 10px 16px;
-        border-radius: 0;
-        width: 100%;
-        text-align: left;
-        font-size: 13px;
-    }
-    
-    .nav-link.active {
-        background: #51A5DC;
-        border-radius: 0;
-    }
-    
-    .honeywell-heading {
-        font-size: 22px;
-    }
-    
-    .brand-text {
-        font-size: 14px;
-    }
-    
-    .logo-img {
-        height: 40px;
-    }
-    
-    .since {
-        font-size: 9px;
-    }
-}
-
-/* Responsive Small */
-@media (max-width: 600px) {
-    header {
-        padding: 8px 0;
-    }
-    
-    .navbar-custom {
-        padding: 0 10px;
-        gap: 8px;
-    }
-    
-    .nav-left {
-        order: 1;
-    }
-    
-    .nav-center {
-        order: 3;
-        margin: 8px 0;
-    }
-    
-    .nav-right {
-        order: 2;
-        width: auto;
-    }
-    
-    .logo-img {
-        height: 36px;
-    }
-    
-    .brand-text {
-        font-size: 13px;
-    }
-    
-    .since {
-        font-size: 8px;
-    }
-    
-    .honeywell-heading {
-        font-size: 18px;
-    }
-    
-    .nav-menu {
-        right: 10px;
-        left: 10px;
-    }
-    
-    .nav-link {
-        padding: 8px 14px;
-        font-size: 12px;
-    }
-    
-    .nav-toggle span {
-        width: 22px;
-        height: 2px;
-    }
-}
-
-/* Responsive Extra Small */
-@media (max-width: 400px) {
-    .navbar-custom {
-        padding: 0 8px;
-        gap: 5px;
-    }
-    
-    .logo-img {
-        height: 32px;
-    }
-    
-    .brand-section {
-        gap: 1px;
-    }
-    
-    .brand-text {
-        font-size: 11px;
-    }
-    
-    .since {
-        font-size: 8px;
-    }
-    
-    .honeywell-heading {
-        font-size: 16px;
-        letter-spacing: 0.5px;
-    }
-    
-    .nav-link {
-        padding: 6px 12px;
-        font-size: 11px;
-    }
-}
-    /* display: none;
-    flex-direction: column;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px */
-
-
-.nav-toggle span {
-    width: 25px;
-    height: 3px;
-    background: #333;
-    margin: 4px 0;
-    transition: 0.3s;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-    .navbar-custom {
-        padding: 0 20px;
-        gap: 20px;
-    }
-    
-    .honeywell-heading {
-        font-size: 28px;
-    }
-    
-    .brand-text {
-        font-size: 16px;
-    }
-    
-    .logo-img {
-        height: 45px;
-    }
-    
-    .nav-menu {
-        gap: 3px;
-    }
-    
-    .nav-link {
-        padding: 7px 14px;
-        font-size: 13px;
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        padding: 10px 0;
-    }
-    
-    .header-border {
-        display: none;
-    }
-    
-    .navbar-custom {
-        padding: 0 15px;
-        gap: 15px;
-        flex-wrap: wrap;
-    }
-    
-    .nav-left {
-        order: 1;
-    }
-    
-    .nav-center {
-        order: 3;
-        flex-basis: 100%;
-        margin: 8px 0;
-    }
-    
-    .nav-right {
-        order: 2;
-        flex-basis: auto;
-        flex: 1;
-        justify-content: flex-end;
-    }
-    
-    .nav-toggle {
-        display: flex;
-    }
-    
-    .nav-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        background: #f9f9f9;
-        flex-direction: column;
-        gap: 0;
-        padding: 10px 0;
-        border-top: 1px solid #eee;
-        width: 100%;
-    }
-    
-    .nav-menu.active {
-        display: flex;
-    }
-    
-    .nav-menu li {
-        width: 100%;
-    }
-    
-    .nav-link {
-        display: block;
-        padding: 12px 20px;
-        border-radius: 0;
-        width: 100%;
-        text-align: left;
-    }
-    
-    .nav-link.active {
-        border-radius: 0;
-    }
-    
-    .honeywell-heading {
-        font-size: 24px;
-    }
-    
-    .brand-text {
-        font-size: 14px;
-    }
-    
-    .logo-img {
-        height: 40px;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 8px 0;
-    }
-    
-    .navbar-custom {
-        padding: 0 12px;
-        gap: 10px;
-    }
-    
-    .logo-img {
-        height: 35px;
-    }
-    
-    .brand-text {
-        font-size: 12px;
-    }
-    
-    .since {
-        font-size: 9px;
-    }
-    
-    .honeywell-heading {
-        font-size: 20px;
-    }
-    
-    .nav-link {
-        padding: 10px 16px;
-        font-size: 12px;
     }
 }
 
@@ -1359,7 +990,7 @@ header {
 
 @media (max-width: 768px) {
     header {
-        padding: 15px 0;
+        padding: 10px 0;
     }
     
     .header-decorative {
@@ -1424,7 +1055,7 @@ header {
     
     .nav-link {
         padding: 10px 15px !important;
-        font-size: 13px;
+        font-size: 16px;
     }
     
     .company-name {
@@ -1453,68 +1084,7 @@ header {
     }
 }
 
-@media (max-width: 480px) {
-    header {
-        padding: 10px 0;
-    }
-    
-    .header-top-section {
-        flex-direction: column;
-        gap: 12px;
-    }
-    
-    .header-left,
-    .header-center,
-    .header-right {
-        width: 100%;
-    }
-    
-    .navbar-brand {
-        gap: 6px;
-    }
-    
-    .logo-img {
-        height: 30px;
-    }
-    
-    .brand-text {
-        font-size: 12px;
-    }
-    
-    .honeywell-text {
-        font-size: 18px;
-    }
-    
-    .navbar-nav {
-        gap: 6px;
-    }
-    
-    .nav-link {
-        padding: 8px 12px !important;
-        font-size: 12px;
-    }
-    
-    .company-name {
-        font-size: 28px;
-    }
-    
-    .tagline {
-        font-size: 18px;
-    }
-    
-    .divider {
-        width: 200px;
-        margin: 15px auto;
-    }
-    
-    .banner-section {
-        height: 300px;
-    }
-    
-    .banner-footer p {
-        font-size: 12px;
-    }
-}
+
 
 .client-section h1{
    font-family: "Raleway", Sans-serif;
@@ -2597,4 +2167,198 @@ font-size: 67px;
   .price-list-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
+}
+
+.blog-details-page{
+    margin-top: 150px;
+}
+
+@media (max-width: 480px) {
+  
+    .client-section {
+    background-color: #EDEDED;
+    margin-top: 160px;
+}
+    
+    .header-left,
+    .header-center,
+    .header-right {
+        width: 100%;
+    }
+    
+    .navbar-brand {
+        gap: 6px;
+    }
+    
+    .logo-img {
+        height: 30px;
+    }
+    
+    .brand-text {
+        font-size: 12px;
+    }
+    
+    .honeywell-text {
+        font-size: 18px;
+    }
+    
+    .navbar-nav {
+        gap: 6px;
+    }
+    
+    .nav-link {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+    
+    .company-name {
+        font-size: 28px;
+    }
+    
+    .tagline {
+        font-size: 18px;
+    }
+    
+    .divider {
+        width: 200px;
+        margin: 15px auto;
+    }
+    
+    .banner-section {
+        height: 300px;
+    }
+    
+    .banner-footer p {
+        font-size: 12px;
+    }
+    .carousel-inner {
+    height: 65dvh;
+}
+ 
+    
+     .logo-img {
+        height: 19px;
+    }
+        .nav-right {
+        width: 0%;
+        margin-top: 6px;
+    }
+        .nav-left {
+        width: 81% !important;
+    }
+    .client-section h1 {
+    font-family: "Raleway", Sans-serif;
+    font-size: 31px !important;
+    font-weight: 600;
+    color: #51A5DC;
+    text-align: center;
+    padding: 33px 0px 14px 0px;
+}
+    .lab-title {
+        font-family: 'Raleway', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        color: #51A5DC;
+        line-height: 1.05;
+        /* text-align: right; */
+        line-height: 33px;
+        /* letter-spacing: -2px; */
+    }
+    .laboratory-section {
+    background: #fff;
+    padding: 41px 0 70px 0;
+}
+    .lab-vert-img {
+        height: 0% !important;
+        width: 14px !important;
+    }
+    .lab-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px !important;
+    color: #626161;
+    line-height: 1.7;
+    margin: 0;
+    text-align: justify;
+    padding-right: 14px !important;
+}
+.lab-divider {
+
+    min-width: 28px;
+    padding: 0px 24px;
+}   
+.offer-arrow {
+    color: #222;
+    font-size: 12px;
+
+}
+.offer-list li {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: flex-start;
+    line-height: 15px;
+    font-size: 13px;
+}
+.offer-divider-col {
+    display: none !important;
+}
+    .offer-title {
+        font-size: 43px;
+        margin-top: 12px;
+        flex-direction: column;
+    }
+        .partner-logo {
+        max-height: 40px;
+        max-width: 110px;
+    }
+    .partners-logos-wrapper {
+    flex: 1;
+    max-width: 1000px;
+    overflow: hidden;
+    background: transparent;
+    position: relative;
+    min-height: 35px;
+}
+    .about-us-title {
+        font-size: 58px;
+    }
+        .about-dot-img {
+        width: 141px;
+        height: 36px;
+        margin-right: 8px;
+    }
+    .about-us-divider {
+    display: none;
+}
+    .about-us-desc {
+        font-size: 13px;
+        padding: 0px 10px;
+    }
+    .mission-sec {
+    width: 100%;
+    background: #fff;
+    padding: 40px 0px 40px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mission-content {
+
+    gap: 5px;
+
+}
+    .mission-vert-img {
+        height: 300px;
+    }
+    .mission-vert {
+
+    margin-top: 0px;
+}
+    .mission-desc {
+        font-size: 13px;
+        text-align: start;
+        padding-right: 10px;
+    }
+        .mission-title {
+        font-size: 48px;
+    }
 }

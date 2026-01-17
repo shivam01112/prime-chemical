@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     console.log('script.js: DOMContentLoaded');
     // Nav toggle
@@ -41,7 +40,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showSlide(n) {
         if (!slides.length) return;
-        slides.forEach(slide => slide.classList.remove('active'));
+        slides.forEach(slide => {
+            slide.classList.remove('active');
+            slide.style.transition = 'transform 0.5s ease-in-out'; // Smooth transition
+        });
         dots.forEach(d => d.classList.remove('active'));
         const i = ((n % totalSlides) + totalSlides) % totalSlides;
         slides[i].classList.add('active');
@@ -80,4 +82,3 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('script.js: no slides present');
     }
 });
-    
