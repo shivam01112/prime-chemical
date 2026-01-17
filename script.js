@@ -81,4 +81,42 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         console.log('script.js: no slides present');
     }
+
+    // Popup functionality
+    const popup = document.getElementById('popup');
+    const popupImage = document.getElementById('popupImage');
+    const popupClose = document.getElementById('popupClose');
+
+    const images = [
+        'imgs/price-list-first.jpg',
+        'imgs/price-list-sec.jpg'
+    ];
+
+    let currentImageIndex = 0;
+
+    function showPopup(index) {
+        popupImage.src = images[index];
+        popup.style.display = 'flex';
+    }
+
+    function closePopup() {
+        popup.style.display = 'none';
+        currentImageIndex++;
+        if (currentImageIndex < images.length) {
+            setTimeout(() => showPopup(currentImageIndex), 500); // Show next image after closing
+        }
+    }
+
+    // Show the first image on page load
+    showPopup(currentImageIndex);
+
+    // Close button event listener
+    popupClose.addEventListener('click', closePopup);
+
+    // Close popup when clicking outside the image
+    popup.addEventListener('click', function (event) {
+        if (event.target === popup) {
+            closePopup();
+        }
+    });
 });
